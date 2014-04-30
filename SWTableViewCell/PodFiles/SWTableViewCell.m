@@ -46,10 +46,9 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier containingTableView:(UITableView *)containingTableView leftUtilityButtons:(NSArray *)leftUtilityButtons rightUtilityButtons:(NSArray *)rightUtilityButtons
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self = [self initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        [self initializer];
         self.containingTableView = containingTableView;
         self.rightUtilityButtons = rightUtilityButtons;
         self.leftUtilityButtons = leftUtilityButtons;
@@ -61,18 +60,6 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    
-    if (self)
-    {
-        [self initializer];
-    }
-    
-    return self;
-}
-
-- (instancetype)init
-{
-    self = [super init];
     
     if (self)
     {
